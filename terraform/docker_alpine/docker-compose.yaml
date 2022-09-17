@@ -12,5 +12,6 @@ services:
     volumes:
       - .:/project
     env_file: 
-      - variables.env
+      - gcp.env
+      - aws.env
     entrypoint: /project/entrypoint.sh
