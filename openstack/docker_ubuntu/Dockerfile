@@ -13,3 +13,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 # OpenStack CLI
 RUN pip install python-openstackclient
+
+ENTRYPOINT ["bash", "entrypoint.sh"]
