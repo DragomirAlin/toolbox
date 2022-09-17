@@ -9,6 +9,7 @@ services:
       dockerfile: Dockerfile
       args:
         TERRAFORM_VERSION: ${TERRAFORM_VERSION}
+        GCLOUD_VERSION: ${GCLOUD_VERSION}
     volumes:
       - .:/project
     env_file: 
