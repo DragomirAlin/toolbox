@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  openstack:
+    container_name: openstack_toolbox
+    image: openstack_toolbox
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/project

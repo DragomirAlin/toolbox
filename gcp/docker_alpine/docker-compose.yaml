@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  infra:
+    container_name: gcp_infra
+    image: gcp_infra
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GCLOUD_VERSION: ${GCLOUD_VERSION}
+    volumes:
+      - .:/project
+    env_file: 
+      - gcp.env

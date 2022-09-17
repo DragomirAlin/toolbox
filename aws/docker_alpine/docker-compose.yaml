@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  aws:
+    container_name: aws_toolbox
+    image: aws
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/project
+    env_file: 
+      - aws.env
