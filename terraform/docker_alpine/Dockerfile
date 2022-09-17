@@ -46,3 +46,5 @@ COPY .ssh/${INFRA}/id_rsa /root/.ssh/id_rsa
 COPY .ssh/${INFRA}/id_rsa.pub /root/.ssh/id_rsa.pub
 
 RUN chmod 600 /root/.ssh/id_rsa
+
+ENTRYPOINT ["bash", "entrypoint.sh"]
